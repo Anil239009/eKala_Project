@@ -1,7 +1,6 @@
-package com.services;
+package com.app.services;
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import javax.transaction.Transactional;
@@ -13,7 +12,8 @@ import org.springframework.stereotype.Service;
 import com.app.dao.UserDao;
 import com.app.dto.ApiResponse;
 import com.app.dto.UserDto;
-import com.app.entity.User;
+import com.app.entities.User;
+
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
