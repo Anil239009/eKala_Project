@@ -4,6 +4,7 @@ import './AdminNavbar.css'
 function AdminNavbar() {
     const [menuOpen,setMenuOpen]=useState(false);
   return (
+   
     <>
     <navbar>
     <Link to='/admin' className='title'>Home</Link>

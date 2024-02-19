@@ -1,14 +1,12 @@
 .card-img{
     width: 10.5rem !important;
+    height: 10.5rem;
     transition: 0.4s;
 }
 .card-img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
-.add_to_cart{
-    padding: 10px;
-}
 .view-more{
     padding: 7px 20px;
     background-color: #df2020;

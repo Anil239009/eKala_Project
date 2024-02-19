@@ -1,5 +1,6 @@
 import React from 'react'
-import AdminNavbar from './AdminNavbar'
+
+import { Link, NavLink } from 'react-router-dom'
 import user from '../icons/team.png'
 import pizza from '../icons/artlogo.png'
 import payment from '../icons/wallet.png'
@@ -8,8 +9,8 @@ import delivery from '../icons/deliveryBoy.jpg'
 function AdminDetails() {
   return (
     <>
-        <AdminNavbar></AdminNavbar>
-
+    <h3>Admin</h3>
+        <Link to='/admin' className='title'></Link>
         <div className="container">
           {/* first row */}
           <div className="row mt-3">
@@ -21,7 +22,7 @@ function AdminDetails() {
                   <div className="container">
                     <img style={{"maxWidth":"150px"}} src={user} className='img-fluid' alt="not found" />
                   </div>
-                  <a >User List</a>
+                  <NavLink to='/userList' ><h2>List of Users</h2></NavLink>  
                 </div>
               </div>
             </div>
@@ -33,7 +34,7 @@ function AdminDetails() {
                 <div className="container">
                     <img src={pizza} style={{"maxWidth":"150px"}}  className='img-fluid' alt="not found" />
                   </div>
-                  <a >Art List</a>
+                  <NavLink to='/artList' ><h2>List of Arts</h2></NavLink>  
                 </div>
               </div>
             </div>
@@ -45,7 +46,7 @@ function AdminDetails() {
                 <div className="container">
                     <img src={payment} style={{"maxWidth":"150px"}} className='img-fluid' alt="not found" />
                   </div>
-                  <a >payment List</a>
+                  <NavLink to='/paymentList' ><h2>List of Payments</h2></NavLink>  
                 </div>
               </div>
             </div>
@@ -61,7 +62,7 @@ function AdminDetails() {
                 <div className="container">
                     <img src={delivery} style={{"maxWidth":"150px"}} className='img-fluid' alt="not found" />
                   </div>
-                  <a >Delivery List</a>
+                  <NavLink to='/deliveryList' ><h2>List of Deliveries</h2></NavLink>  
                 </div>
               </div>
             </div>
@@ -71,4 +72,4 @@ function AdminDetails() {
   )
 }
 
-export default Admin
+export default AdminDetails;

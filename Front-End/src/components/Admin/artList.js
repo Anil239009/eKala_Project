@@ -3,8 +3,7 @@ import "../../css/AllArts.css";
 import "../../css/card-body.css";
 import { Link, NavLink } from 'react-router-dom'
 import ArtService from "../../Services/ArtService";
-import { AlertHeading } from "react-bootstrap";
-function ArtArts() {
+function ArtList() {
     const [Art,setart]=useState([]);
     const fetchData=()=>{
         ArtService.getAllArt().then((result)=>{
@@ -24,7 +23,10 @@ function ArtArts() {
             <div className="container">
                 <br></br>
                 <div className="col-lg-12 md-12" >
-                    <h2>Find your best Art here</h2>
+                    <div></div>
+                    <div> <p ><button className="btn-success">Add new Art here</button></p></div>
+                    <div></div>
+               
                 </div>
                 <br></br>
                 <div className="row row-cols-1 row-cols-md-3">
@@ -36,25 +38,11 @@ function ArtArts() {
                         <h4 className="align-item-center justify-content-between">T{p.artName}</h4>
                         <p class="price">₹{p.price}</p>
                         <p> {p.description}</p>
-                        <p><button className="btn-primary">Add to Cart</button></p>
+                        <div><button className="btn-success"><NavLink to='/UpdateArt'>Update</NavLink ></button>
+                        <button className="btn-danger">Delete</button>
                         </div>
-                      </div>
-                    // <div className="col mb-4">    
-                    // <div className="card" key={p.id}>
-                    // <img src={`./images/${p.artImagePath.split('/').pop()}`} className="card-img mx-auto d-block" alt="..." />
-                    // <div className="card-body">
-                    //     <h5 className="align-item-center justify-content-between">
-                    //     {p.artName}</h5>
-                    //     <p >
-                    //        {p.description}
-                    //     </p> 
-                    //    <span className="price">₹{p.price}</span>
-                    // </div>
-                    // </div>
-                    // </div>
-
- 
-                    
+                        </div>
+                      </div>        
   )
                 }
                 </div>
@@ -64,4 +52,4 @@ function ArtArts() {
     );
 }
 
-export default ArtArts;
+export default ArtList;

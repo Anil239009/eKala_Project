@@ -14,6 +14,11 @@ import ArtistBook from './components/home/ArtistBook';
 import ArtGallery from './components/home/ArtGallery';
 import Registration from './components/Registration';
 import AllArts from './components/Admin/AllArts';
+import ArtList from './components/Admin/artList';
+import UpdateArt from './components/Admin/UpdateArt'
+import Delivery from './components/Admin/Delivery';
+
+import AdminDetails from './components/Admin/AdminDetails';
 
 function App(){
   return (
@@ -30,6 +35,10 @@ function App(){
             <Route path="/gallery" element={<ArtGallery></ArtGallery>}></Route>
             <Route path='/register' element={<Registration></Registration>}></Route>
             <Route path="/arts" element={<AllArts></AllArts>}></Route>
+            <Route path="/admin" element={<AdminDetails></AdminDetails>}></Route>
+            <Route path="/artList" element={<ArtList></ArtList>}></Route>
+            <Route path="/UpdateArt" element={<UpdateArt></UpdateArt>}></Route>
+            <Route path="/delivery" element={<Delivery></Delivery>}></Route>
           </Routes>
         </div>
         <Footer></Footer>
