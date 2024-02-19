@@ -3,7 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'remixicon/fonts/remixicon.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import axios from 'axios';
 import { BrowserRouter } from 'react-router-dom';
+
+axios.defaults.baseURL='http://localhost:8080/ekala';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

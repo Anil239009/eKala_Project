@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 import ArtistBook from './components/home/ArtistBook';
 import ArtGallery from './components/home/ArtGallery';
 import Registration from './components/Registration';
+import AllArts from './components/Admin/AllArts';
 
 function App(){
   return (
@@ -28,6 +29,7 @@ function App(){
             <Route path="/contact" element={<Contact></Contact>}></Route>
             <Route path="/gallery" element={<ArtGallery></ArtGallery>}></Route>
             <Route path='/register' element={<Registration></Registration>}></Route>
+            <Route path="/arts" element={<AllArts></AllArts>}></Route>
           </Routes>
         </div>
         <Footer></Footer>
@@ -35,5 +37,7 @@ function App(){
     </div>
   );
 }
+
+
 
 export default App;

@@ -16,7 +16,7 @@ export default function NavigationBar(){
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <NavLink className="nav-link active mx-2 text-light" aria-current="page" to="">Home</NavLink>
-                        <NavLink className="nav-link text-light" to="/gallery">All arts</NavLink>
+                        <NavLink className="nav-link text-light" to="/arts">All arts</NavLink>
                         {/* <NavLink className="nav-link text-light" to="/feedback">Feedback</NavLink> */}
                         <NavLink className="nav-link text-light" to="/login">SignIn</NavLink>
                         <NavLink className="nav-link text-light" to="/register">Registration</NavLink>

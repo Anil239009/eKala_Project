@@ -31,7 +31,7 @@ export default function ArtShowcase(){
                 </div>
             </div>
             <div className="text-center">
-                    <NavLink to="/gallery"><button type="button" className="btn btn-dark">......................Explore More.....................</button></NavLink>
+                    <NavLink to="/arts"><button type="button" className="btn btn-dark">..........Explore More..........</button></NavLink>
             </div>
             <hr/>
         </div>

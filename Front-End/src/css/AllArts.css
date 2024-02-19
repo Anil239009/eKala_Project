@@ -1,0 +1,24 @@
+.card-img{
+    width: 10.5rem !important;
+    transition: 0.4s;
+}
+.card-img:hover{
+    transform: scale(1.2);
+}
+
+.add_to_cart{
+    padding: 10px;
+}
+.view-more{
+    padding: 7px 20px;
+    background-color: #df2020;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.card-text,.card-title,.price,.add_to_cart{
+    font-size: 1.2rem;
+    font-weight: 300;
+}

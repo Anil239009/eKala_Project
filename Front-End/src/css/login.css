@@ -29,3 +29,6 @@ label{
 .text-danger{
     font-size: 15px;
 }
+.row{
+    justify-content: center;
+}

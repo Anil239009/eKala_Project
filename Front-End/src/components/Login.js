@@ -34,7 +34,7 @@ export default function Login() {
 
   return (
     <div className="login-out-container">
-      <div className="container text-center">
+      <div className="container text-center col-6">
         <div className="row">
           <div className="col left-div-login">
             <h1><strong>Login here</strong></h1>
