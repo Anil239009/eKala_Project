@@ -1,0 +1,31 @@
+.left-div-login{
+    background-color:rgba(0, 0, 0,0.6);
+    color: black ;
+    font-size: 20px;
+    border-radius: 20px;
+    margin: 2.3em;
+    padding: 60px;
+}
+
+.login-out-container{
+    background-image: url("../image/background5.png");
+    background-repeat:repeat ;
+    /* background-size: cover; */
+    background-position:20% ;
+}
+.login-form{
+    margin: 10px;
+}
+label{
+    color: white;
+}
+.right-div-login{
+    background-image: url("../image/background3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.text-danger{
+    font-size: 15px;
+}

@@ -1,0 +1,25 @@
+.row{
+    flex-wrap: nowrap;
+  }
+.artShowcaseRow{
+    display: flex;
+    flex-wrap: wrap;
+}
+.artShowcaseRow .artShowcaseCol{
+    flex: 33.3%;
+    width: auto;
+    overflow: hidden;
+    padding: 5px 5px;
+    height: 100%;
+}
+.artShowcaseRow .artShowcaseCol img{
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    filter: grayscale(0) brightness(1);
+    transition: 0.3s linear;
+}
+.artShowcaseRow .artShowcaseCol img :hover{
+    filter: grayscale(1) brightness(0.5);
+}

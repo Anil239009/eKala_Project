@@ -1,0 +1,14 @@
+.registration-out-container{
+    /* background-color: aqua; */
+    background-image: url("../image/background11.jpg");
+    /* background-position: 50%; */
+    background-size: cover;
+}
+.registration-in-container{
+    padding: 3em;
+}
+.registration-form-container{
+    background-color: rgba(0,0,0,0.5);
+    padding: 3em;
+    border-radius: 30px;
+}
