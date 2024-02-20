@@ -33,7 +33,7 @@ function ArtArts() {
                         <div className="card" key={p.id}>
                         <div class="card" className="align-item-center justify-content-between" >
                         <img className="img" src={`./images/${p.artImagePath.split('/').pop()}`}  alt="..." />
-                        <h4 className="align-item-center justify-content-between">T{p.artName}</h4>
+                        <h4 className="align-item-center justify-content-between">{p.artName}</h4>
                         <p class="price">₹{p.price}</p>
                         <p> {p.description}</p>
                         <p><button className="btn-primary">Add to Cart</button></p>

@@ -17,6 +17,8 @@ import AllArts from './components/Admin/AllArts';
 import ArtList from './components/Admin/artList';
 import UpdateArt from './components/Admin/UpdateArt'
 import Delivery from './components/Admin/Delivery';
+import Payment from './components/Admin/Payments';
+import Users from './components/Admin/Users';
 
 import AdminDetails from './components/Admin/AdminDetails';
 
@@ -39,6 +41,8 @@ function App(){
             <Route path="/artList" element={<ArtList></ArtList>}></Route>
             <Route path="/UpdateArt" element={<UpdateArt></UpdateArt>}></Route>
             <Route path="/delivery" element={<Delivery></Delivery>}></Route>
+            <Route path="/payments" element={<Payment></Payment>}></Route>
+            <Route path="/users" element={<Users></Users>}></Route>
           </Routes>
         </div>
         <Footer></Footer>
@@ -46,7 +50,5 @@ function App(){
     </div>
   );
 }
-
-
 
 export default App;

@@ -22,7 +22,7 @@ function AdminDetails() {
                   <div className="container">
                     <img style={{"maxWidth":"150px"}} src={user} className='img-fluid' alt="not found" />
                   </div>
-                  <NavLink to='/userList' ><h2>List of Users</h2></NavLink>  
+                  <NavLink to='/users' ><h2>List of Users</h2></NavLink>  
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@ function AdminDetails() {
                 <div className="container">
                     <img src={payment} style={{"maxWidth":"150px"}} className='img-fluid' alt="not found" />
                   </div>
-                  <NavLink to='/paymentList' ><h2>List of Payments</h2></NavLink>  
+                  <NavLink to='/payments' ><h2>List of Payments</h2></NavLink>  
                 </div>
               </div>
             </div>
@@ -56,13 +56,13 @@ function AdminDetails() {
           <div className="row">
 
             {/* first col */}
-            <div className="col-md-6 mt-2">
+            <div className="col-md-4 mt-3">
             <div className="card">
                 <div className="card-body text-center">
                 <div className="container">
                     <img src={delivery} style={{"maxWidth":"150px"}} className='img-fluid' alt="not found" />
                   </div>
-                  <NavLink to='/deliveryList' ><h2>List of Deliveries</h2></NavLink>  
+                  <NavLink to='/delivery' ><h2>List of Deliveries</h2></NavLink>  
                 </div>
               </div>
             </div>

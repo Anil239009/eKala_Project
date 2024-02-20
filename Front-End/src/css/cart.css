@@ -1,0 +1,15 @@
+.bg-cart{   
+    background-image: url("../image/background12.png");
+    background-position: center;
+    background-size: cover;
+}
+.cart-out-container{
+    padding: 8em;
+}
+.cart-in-container{
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+button{
+    border-radius: 10px;
+}

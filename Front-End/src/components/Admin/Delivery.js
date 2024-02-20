@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import DeliveryService from '../../Services/DeliveryService'
+import React, { useEffect, useState } from 'react';
+import DeliveryService from "../../Services/DeliveryService";
+// import "../../css/card-body.css";
+import "../../css/AllArts.css";
 
 function Delivery() {
 
@@ -21,19 +23,23 @@ function Delivery() {
     <>
     
     <div className="container mt-5">
-        <h3 style={{"textAlign":"center"}}>Total no Arts delivered </h3>
-<div className="row">
-     <div className="col-md-4">
-  {
+    <div className="col-lg-12 md-12" >
+        <h3 style={{"textAlign":"center"}}>List of Delivered Arts</h3>
+    <div className="row">
+      <br></br>
+      <div className="row row-cols-1 row-cols-md-3">
+      {
      
-     delivery.map(p=>
+      delivery.map(p=>
         <div className="card" key={p.id}>
             <div className="card-body">
-            <ul style={{"listStyle":"none"}}>
-                <li> <span style={{"color": "red","fontWeight": "bold"}}> Delivery Time: </span>  {p.deliveryTime}</li>
+            <ul style={{"listStyle":"none"}} >
+                <li> <span style={{"color": "red","fontWeight": "bold"}}> Delivery Time: </span>  {p.deliveryDate}</li>
+                <li> <span style={{"color": "red","fontWeight": "bold"}}> User: </span> {p.payment.user.firstName} {p.payment.user.lastName}</li>
+                <li> <span style={{"color": "red","fontWeight": "bold"}}> Mobile: </span> {p.payment.user.mobileNo}</li>
+                <li> <span style={{"color": "red","fontWeight": "bold"}}> payment Status: </span> {p.payment.paymentStatus}</li>
                 <li> <span style={{"color": "red","fontWeight": "bold"}}> Delivery Status: </span> {p.deliveryStatus}</li>
-                <li> <span style={{"color": "red","fontWeight": "bold"}}> User: </span> {p.payment.user.name}</li>
-                <li> <span style={{"color": "red","fontWeight": "bold"}}>Ordered Items are: </span> </li>
+                {/* <li> <span style={{"color": "red","fontWeight": "bold"}}>Ordered Items are: </span> </li> */}
             </ul>
             </div>
         </div>
@@ -43,8 +49,9 @@ function Delivery() {
  </div>
   
   </div>
+  </div>
   </>
   )
 }
 
-export default Delivery
+export default Delivery;

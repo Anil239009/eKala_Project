@@ -6,7 +6,7 @@ class DeliveryService{
     }
 
     getDeliveryByUser(id){
-        return axios .get('/delivery')
+        return axios .get('/delivery/id')
     }
 }
 export default new DeliveryService();

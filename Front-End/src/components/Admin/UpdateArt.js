@@ -90,7 +90,7 @@ function UpdateArt(props) {
               {/* Row 1 */}
               <div className="row">
                 <div className="col-6">
-                  <label htmlFor="fName">First Name</label>
+                  <label htmlFor="fName">Art Name</label>
                   <input type="text" className="form-control" name="fName" id="fName" placeholder="Enter first name" value={fName} onChange={handleFNameChange} required />
                 </div>
                 <div className="col-6">
