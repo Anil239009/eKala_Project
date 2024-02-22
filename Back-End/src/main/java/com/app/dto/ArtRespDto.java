@@ -9,6 +9,8 @@ import lombok.ToString;
 @ToString
 public class ArtRespDto {
 	
+	private Long Id;
+	
 	private String artName;
 	
 	private String description;
