@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link, NavLink } from 'react-router-dom'
 import user from '../icons/team.png'
-import pizza from '../icons/artlogo.png'
+ import pizza from '../icons/artlogo.png'
 import payment from '../icons/wallet.png'
 import delivery from '../icons/deliveryBoy.jpg'
 
@@ -32,7 +32,7 @@ function AdminDetails() {
             <div className="card">
                 <div className="card-body text-center">
                 <div className="container">
-                    <img src={pizza} style={{"maxWidth":"150px"}}  className='img-fluid' alt="not found" />
+                  <img src={pizza} style={{"maxWidth":"150px"}}  className='img-fluid' alt="not found" />
                   </div>
                   <NavLink to='/artList' ><h2>List of Arts</h2></NavLink>  
                 </div>

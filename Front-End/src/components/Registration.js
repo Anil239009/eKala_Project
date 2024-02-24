@@ -1,23 +1,39 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/registration.css"
-export default function Registration(props) {
+import UserService from "../Services/UserService";
+
+function Registration(props) {
   const navigate=useNavigate();
-  const [fName, setFName] = useState("");
-  const [lName, setLName] = useState("");
+  const [firstName, setfirstName] = useState("");
+  const [lastName, setlastName] = useState("");
   const [mobileNo, setMobileNo] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCPassword] = useState("");
   const [role, setRole] = useState("");
 
-  const handleFNameChange = (e) => setFName(e.target.value);
-  const handleLNameChange = (e) => setLName(e.target.value);
+  const handlefirstNameChange = (e) => setfirstName(e.target.value);
+  const handlelastNameChange = (e) => setlastName(e.target.value);
   const handleMobileNoChange = (e) => setMobileNo(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
   const handleCPasswordChange = (e) => setCPassword(e.target.value);
   const handleRoleChange = (e) => setRole(e.target.value);
+
+  const handleSubmit =(event) => {
+    event.preventDefault();
+      if(validate()){
+        const user={firstName,lastName,role,mobileNo,email,password};
+        console.log(user);
+
+        UserService.addNewUser(user).then((Response)=>{
+          console.log(Response.data);
+          navigate('/login');
+        })
+      }     
+};
+
   //validation of email-----------------------------------------------------------------------------------
   function validateEmail(){
     var regEmail=/^[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)+(?:com|in|org|microsoft|co.in)$/;
@@ -62,40 +78,36 @@ export default function Registration(props) {
       document.getElementById("errRole").innerHTML="";
       return true;
     }
-    document.getElementById("errRole").innerHTML="select atleast one role";
+    document.getElementById("errRole").innerHTML="select at least one role";
     return false;
   }
   //general validation ----------------------------------------------------------------------------------
   const validate = (e) => {
-    e.preventDefault();
-
+    // e.preventDefault();
     var f1=validateEmail();
     var f2=validatePassword();
     var f3=validateConfirmedPassword();
     var f4=validateMobileNo();
     var f5=validateRole();
     var flag=f1 && f2 && f3 && f4 && f5;
-    if(flag){
-      alert("Successfully logged in, Now log in to get batter experience.");
-      e.target.submit();
-    }
+    return flag;
   };
 
   return (
     <div>
       <div className='registration-out-container'>
         <div className="container registration-in-container">
-        <form action="/login" className="container registration-form-container" onSubmit={validate}>
+        <form action="/login" className="container registration-form-container" onSubmit={handleSubmit}>
           <h1 style={{color:"white"}}><storong>Registration here</storong></h1>
           {/* Row 1 */}
           <div className="row">
             <div className="col-6">
-              <label htmlFor="fName">First Name</label>
-              <input type="text" className="form-control" name="fName" id="fName" placeholder="Enter first name" value={fName} onChange={handleFNameChange} required />
+              <label htmlFor="firstName">First Name</label>
+              <input type="text" className="form-control" name="firstName" id="firstName" placeholder="Enter first name" value={firstName} onChange={handlefirstNameChange} required />
             </div>
             <div className="col-6">
-              <label htmlFor="lName">Last Name</label>
-              <input type="text" className="form-control" name="lName" id="lName" placeholder="Enter last name" value={lName} onChange={handleLNameChange} required/>
+              <label htmlFor="lastName">Last Name</label>
+              <input type="text" className="form-control" name="lastName" id="lastName" placeholder="Enter last name" value={lastName} onChange={handlelastNameChange} required/>
             </div>
           </div>
           {/* Row 2 */}
@@ -149,3 +161,4 @@ export default function Registration(props) {
     </div>
   )
 }
+export default Registration;
